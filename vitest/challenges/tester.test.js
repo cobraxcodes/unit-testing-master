@@ -44,17 +44,51 @@ describe('even checker', () =>{
 // Challenge 3: String Contains
 // ✅ Test if the string 'Hello world' includes the word 'world'.
 
+describe('string contains', () =>{
+    let string = 'hello world'
+    it('checks if a word is included in a string', () =>{
+        expect(string).toContain('world')
+    })
+})
+
+
 // Challenge 4: Array Includes
 // ✅ Test if the array ['apple', 'banana', 'cherry'] contains 'banana'.
+describe('array includes', ()=>{
+    let array = ['apple', 'banana', 'cherry']
+    it('tests array if it includes a word', ()=>{
+        expect(array).toContain('banana')
+    })
+})
 
 // Challenge 5: Capitalize Function
 // ✅ Write a function capitalize(word) that returns the same word with the first letter capitalized.
 // Test it with 'cobra' to check that it returns 'Cobra'.
 
+function capitalize(word){
+  let capital = word.slice(0,1).toUpperCase()
+  let reset = word.slice(1)
+  return capital + reset
+}
+
+describe(' capitalize function ', () =>{
+    it('checks if first letter is capitalized', ()=>{
+        expect(capitalize('hello')).toBe("Hello")
+    })
+})
+
 // Challenge 6: Object Property Check
 // ✅ Create an object:
 // const user = { name: 'Melrose', age: 30 }
 // Write a test to check if the object has a property name with value 'Melrose'.
+
+const user = { name: 'Melrose', age: 30 }
+describe('object property check', () =>{
+    it('checks if object contains a value', ()=>{
+        expect(user).toHaveProperty('name', "Melrose")
+    })
+})
+
 
 // Challenge 7: Negative Test
 // ✅ Write a test to check that 10 / 2 is not equal to 3.
