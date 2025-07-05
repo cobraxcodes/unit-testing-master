@@ -92,19 +92,42 @@ describe('object property check', () =>{
 
 // Challenge 7: Negative Test
 // ✅ Write a test to check that 10 / 2 is not equal to 3.
+describe('negative test',()=>{
+    let division = 10 / 2
+    it('tests to check that number is not equal', ()=>{
+        expect(division).not.toBe(3)
+    })
+})
 
 // Challenge 8: Length Check
 // ✅ Test if the length of the string 'vitest' is 6.
+describe('length check', ()=>{
+    let string = 'vitest'
+    it('tests length of a string', ()=>{
+        expect(string.length).toBe(6)
+    })
+})
 
 // Challenge 9: Array Length Test
 // ✅ Test that the array [1, 2, 3, 4, 5] has a length of 5.
+describe('array length test', ()=>{
+    let arr = [1, 2, 3, 4, 5]
+    it('tests the length of an array', ()=>{
+        expect(arr.length).toBe(5)
+    })
+})
 
 // Challenge 10: Function Throws Error
 // ✅ Write a function throwError() that throws an error with message 'Something went wrong'.
 // Write a test to check that it throws when called.
 // Example:
-// function throwError() {
-//   throw new Error('Something went wrong');
-// }
+function throwError() {
+  throw new Error('Something went wrong');
+}
 
-// expect(() => throwError()).toThrow('Something went wrong');
+describe('function throws errr', () =>{
+    it('expects a function to throw an error', ()=>{
+        expect(throwError).toThrow('Something went wrong')
+    })
+})
+
