@@ -14,12 +14,32 @@ describe('Math operations', () =>{
 
 // Challenge 1: Basic Arithmetic
 // ✅ Write a test that checks if 4 * 2 equals 8.
+describe('basic arithmetic', ()=>{
+    it('should give the product correclty', () =>{
+        const product = 4 * 2
+        expect(product).toBe(8)
+    })
+})
 
 // Challenge 2: Simple Function
 // ✅ Write a function isEven(num) that returns true if a number is even, false otherwise.
 // Then write 2 tests:
 // One to check isEven(4) is true
 // One to check isEven(5) is false
+function isEven(num){
+    if(num % 2 === 0){
+        return true
+    }else{
+        return false
+    }
+}
+
+describe('even checker', () =>{
+    it('tests for even numbers', () =>{
+        expect(isEven(4)).toBe(true)
+    })
+})
+
 
 // Challenge 3: String Contains
 // ✅ Test if the string 'Hello world' includes the word 'world'.
